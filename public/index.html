@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Log</title>
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Travel Log - Document Your Adventures" />
+    <meta
+      property="og:description"
+      content="Keep track of your travel budget, places visited, photos, videos, and more."
+    />
+    <meta property="og:image" content="/public/images/favicon.png" />
+    <meta property="og:url" content="http://localhost:8520/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Travel Log" />
+  </head>
+  <body>
+    <h1>Travel Log</h1>
+
+    <section id="budget-tracker">
+      <h2>Budget Tracker</h2>
+      <input type="number" id="num-people" placeholder="Number of people" />
+      <ul id="expenses-list"></ul>
+      <input type="text" id="item" placeholder="Item" />
+      <input type="number" id="cost" placeholder="Cost" />
+      <button onclick="addExpense()">Add Expense</button>
+      <p>Total Cost: <span id="total-cost">0</span></p>
+      <p>Cost per Person: <span id="cost-per-person">0</span></p>
+    </section>
+
+    <section id="places-visited">
+      <h2>Places Visited</h2>
+      <input type="text" id="place" placeholder="Place" />
+      <input type="text" id="map-link" placeholder="Google Maps Link" />
+      <button onclick="addPlace()">Add Place</button>
+      <ul id="places-list"></ul>
+    </section>
+
+    <section id="photo-upload">
+      <h2>Upload Photos/Videos</h2>
+      <input type="text" id="folder-tag" placeholder="Tag (Folder Name)" />
+      <input type="file" id="file-upload" multiple />
+      <button onclick="uploadFiles()">Upload</button>
+    </section>
+
+    <section id="todo-list">
+      <h2>To-Do/To-Visit List</h2>
+      <input type="text" id="todo-item" placeholder="To-Do Item" />
+      <button onclick="addTodo()">Add To-Do</button>
+      <ul id="todo-list-items"></ul>
+    </section>
+
+    <section id="backup-plans">
+      <h2>Backup Plans</h2>
+      <input type="text" id="backup-plan" placeholder="Backup Plan" />
+      <button onclick="addBackupPlan()">Add Backup Plan</button>
+      <ul id="backup-plans-list"></ul>
+    </section>
+
+    <section id="contact-info">
+      <h2>Contact Information</h2>
+      <input type="text" id="contact-name" placeholder="Name" />
+      <input
+        type="text"
+        id="contact-info-input"
+        placeholder="Contact Information"
+      />
+      <input type="text" id="contact-reason" placeholder="Reason for Contact" />
+      <button onclick="addContact()">Add Contact</button>
+      <ul id="contact-info-list"></ul>
+    </section>
+
+    <section id="item-spent">
+      <h2>Items Spent</h2>
+      <input type="text" id="user-name" placeholder="User Name" />
+      <input type="text" id="spent-item" placeholder="Item Spent On" />
+      <input type="number" id="spent-cost" placeholder="Cost" />
+      <button onclick="addSpentItem()">Add Spent Item</button>
+      <ul id="spent-list"></ul>
+    </section>
+
+    <section id="zip-download">
+      <h2>Download Files as Zip</h2>
+      <input
+        type="text"
+        id="zip-tag"
+        placeholder="Enter tag/folder name ('*' for all of them)"
+      />
+      <button onclick="downloadZip()">Download Zip</button>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
