@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+section {
+    margin-bottom: 20px;
+}
+input, button {
+    display: block;
+    margin-bottom: 10px;
+}
